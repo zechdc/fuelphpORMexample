@@ -5,10 +5,17 @@
 
 return array(
 	'default' => array(
-		'connection'  => array(
-			'dsn'        => 'mysql:host=localhost;dbname=fuel_dev',
-			'username'   => 'root',
-			'password'   => 'root',
+		'type'         => 'mysql',
+		'connection'   => array(
+		  'hostname'   => 'localhost',
+		  'database'   => 'orm_example',
+		  'username'   => 'root',
+		  'password'   => 'root',
+		  'persistent' => false,
 		),
+		'table_prefix' => '',
+		'charset'      => 'utf8',
+		'caching'      => false,
+		'profiling'    => false,
 	),
 );
