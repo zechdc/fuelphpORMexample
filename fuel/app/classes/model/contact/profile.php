@@ -1,13 +1,13 @@
 <?php
 
-class Model_Contact extends \Orm\Model
+class Model_Contact_Profile extends \Orm\Model
 {
 	protected static $_properties = array(
 		'id',
-		'first_name',
-		'last_name',
-		'address_line_1',
-		'email',
+		'contact_id',
+		'display_name',
+		'about_me',
+		'website_link',
 		'created_at',
 		'updated_at',
 	);
@@ -22,9 +22,8 @@ class Model_Contact extends \Orm\Model
 			'mysql_timestamp' => false,
 		),
 	);
+	protected static $_table_name = 'contact_profiles';
 
-	protected static $_table_name = 'contacts';
-
-	protected static $_has_one = array('contact_profile');
+	protected static $_belongs_to = array('contact');
 
 }
